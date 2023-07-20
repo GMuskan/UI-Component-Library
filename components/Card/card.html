@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/assets/favicon/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/a11y-light.min.css"
+      integrity="sha512-WDk6RzwygsN9KecRHAfm9HTN87LQjqdygDmkHSJxVkVI7ErCZ8ZWxP6T8RvBujY1n2/E4Ac+bn2ChXnp5rnnHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/component.css" />
+    <script src="/index.js" defer></script>
+    <title>UI-Library | Card</title>
+  </head>
+
+  <body>
+    <nav class="navbar nav-main">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="/">
+            <img
+              class="img img-responsive"
+              src="/assets/ui-logo.png"
+              alt="logo"
+            />
+          </a>
+        </div>
+        <div class="drawer-container">
+          <button class="btn outline-primary" data-drawer>
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="backdrop"></div>
+          <div class="drawer">
+            <header>
+              <img
+                class="img img-responsive"
+                src="/assets/ui-logo.png"
+                alt="logo"
+              />
+            </header>
+            <ul class="list drawer-list">
+              <div class="list-title text-bold">Starting Guide</div>
+              <li><a href="/Color/color.html">Color</a></li>
+            </ul>
+            <ul class="list drawer-list">
+              <div class="list-title text-bold">Components</div>
+              <li><a href="/components/Avatar/avatar.html">Avatar</a></li>
+              <li><a href="/components/Alert/alert.html">Alert</a></li>
+              <li><a href="/components/Badge/badge.html">Badge</a></li>
+              <li><a href="/components/Button/button.html">Button</a></li>
+              <li class="text-primary text-bold"><a href="#">Card</a></li>
+              <li><a href="/components/Grid/grid.html">Grid</a></li>
+              <li><a href="/components/Image/image.html">Image</a></li>
+              <li><a href="/components/Input/input.html">Input</a></li>
+              <li><a href="/components/List/list.html">List</a></li>
+              <li><a href="/components/Modal/modal.html">Modal</a></li>
+              <li><a href="/components/Navbar/navbar.html">Navbar</a></li>
+              <li><a href="/components/Rating/rating.html">Rating</a></li>
+              <li><a href="/components/Slider/slider.html">Slider</a></li>
+              <li>
+                <a href="/components/Typography/typography.html">Typography</a>
+              </li>
+              <li><a href="/components/Toast/toast.html">Toast</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav-links">
+          <i class="fas fa-moon theme-icon"></i>
+          <a
+            href="/components/Avatar/avatar.html"
+            class="text-primary text-bold"
+            ><i class="fas fa-file"></i><span>Docs</span></a
+          >
+          <a
+            href="https://github.com/GMuskan"
+            target="_blank"
+            class="text-primary text-bold"
+          >
+            <button class="btn outline-primary">
+              <i class="fab fa-github"></i> GitHub
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="doc-container">
+      <aside class="sidebar">
+        <div class="list">
+          <div class="list-title text-bold">Starting Guide</div>
+          <li><a href="/Color/color.html">Color</a></li>
+        </div>
+        <div class="list">
+          <div class="list-title text-bold">Components</div>
+          <li><a href="/components/Avatar/avatar.html">Avatar</a></li>
+          <li><a href="/components/Alert/alert.html">Alert</a></li>
+          <li><a href="/components/Badge/badge.html">Badge</a></li>
+          <li><a href="/components/Button/button.html">Button</a></li>
+          <li class="text-primary text-bold"><a href="#">Card</a></li>
+          <li><a href="/components/Grid/grid.html">Grid</a></li>
+          <li><a href="/components/Image/image.html">Image</a></li>
+          <li><a href="/components/Input/input.html">Input</a></li>
+          <li><a href="/components/List/list.html">List</a></li>
+          <li><a href="/components/Modal/modal.html">Modal</a></li>
+          <li><a href="/components/Navbar/navbar.html">Navbar</a></li>
+          <li><a href="/components/Rating/rating.html">Rating</a></li>
+          <li><a href="/components/Slider/slider.html">Slider</a></li>
+          <li>
+            <a href="/components/Typography/typography.html">Typography</a>
+          </li>
+          <li><a href="/components/Toast/toast.html">Toast</a></li>
+        </div>
+      </aside>
+      <main class="doc-content">
+        <header class="content-title">Card</header>
+        <div class="content-subtitle">
+          Cards are a great way to display data specific to a certain thing at
+          one place. Cards are easier to look out and catches user's eye easily.
+        </div>
+        <div class="divider"></div>
+
+        <!-- Normal Card -->
+        <div class="content-head">Normal Card</div>
+        <div class="content-subtitle">
+          Normal cards contains a <span class="note">title</span> , a
+          <span class="note">description</span> and a
+          <span class="note">close icon</span>. To use this, enclose
+          <code class="text-bold">&nbsp;card-title&nbsp;</code> and
+          <code class="text-bold">&nbsp;card-content&nbsp;</code> in a
+          <code>card</code> container.
+        </div>
+        <div class="output">
+          <div class="card">
+            <div class="card-title">
+              Kakashi Hatake
+              <i class="fas fa-times card-close"></i>
+            </div>
+            <div class="card-content">
+              The master Copy Cat Ninja, with Chidori! Feared among the other
+              villages as Kakashi of the Sharinghan.
+            </div>
+          </div>
+        </div>
+
+        <div class="code">
+          <pre>
+    <code class="html">
+    /* Using the 'card-title' and 'card-content' class inside 'card' class */ 
+
+            &lt;div class="card"&gt;
+                &lt;div class="card-title"&gt;
+                    Your title
+                    &lt;i class="fas fa-times card-close"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class="card-content"&gt;
+                    Your content
+                &lt;/div&gt;
+            &lt;/div&gt;
+    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Image Card -->
+        <div class="content-head">Image Card</div>
+        <div class="content-subtitle">
+          Image cards contains a <span class="note">title</span>,<span
+            class="note"
+            >image</span
+          >, a <span class="note">description</span> section and a
+          <span class="note">close icon</span>. To use this, enclose
+          <code class="text-bold">&nbsp;card-image&nbsp;</code>,
+          <code class="text-bold">&nbsp;card-title&nbsp;</code> and
+          <code class="text-bold">&nbsp;card-content&nbsp;</code> in a
+          <code>card</code> container.
+        </div>
+        <div class="output">
+          <div class="card">
+            <img
+              class="card-image"
+              src="https://source.unsplash.com/3uuLWb6aQXc/"
+              alt="simple image"
+            />
+            <div class="card-title">
+              Kakashi Hatake
+              <i class="fas fa-times card-close"></i>
+            </div>
+            <div class="card-content">
+              The master Copy Cat Ninja, with Chidori! Feared among the other
+              villages as Kakashi of the Sharinghan.
+            </div>
+          </div>
+        </div>
+
+        <div class="code">
+          <pre>
+    <code class="html">
+    /* Using the 'card-image', 'card-title' and 'card-content' class 
+        inside 'card' class */ 
+
+            &lt;div class="card"&gt;
+            &lt;img class="card-image" src="url" alt=""&gt;
+                &lt;div class="card-title"&gt;
+                    Your title
+                    &lt;i class="fas fa-times card-close"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class="card-content"&gt;
+                    Your content
+                &lt;/div&gt;
+            &lt;/div&gt;
+    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Social Media Card -->
+        <div class="content-head">Social Media Card</div>
+        <div class="content-subtitle">
+          Social Media cards contains a <span class="note">Avatar</span>,
+          <span class="note">Profile Name</span>,
+          <span class="note">Image</span> <span class="note">title</span> , a
+          <span class="note">description</span> and a
+          <span class="note">close icon</span>.
+        </div>
+        <div class="output">
+          <div class="card">
+            <div class="card-header">
+              <div class="badge">
+                <img
+                  class="avatar"
+                  src="https://source.unsplash.com/3uuLWb6aQXc/"
+                  alt="user"
+                />
+                <div class="online"></div>
+              </div>
+              Kakashi Hatake
+            </div>
+            <img
+              class="card-image"
+              src="https://source.unsplash.com/3uuLWb6aQXc/"
+              alt="avatar_1"
+            />
+            <div class="card-content">
+              The master Copy Cat Ninja, with Chidori! Feared among the other
+              villages as Kakashi of the Sharinghan.
+            </div>
+          </div>
+        </div>
+
+        <div class="code">
+          <pre>
+    <code class="html">
+    /* Using classes 'card-header', 'card-title', 'card-image' and 
+    'card-content' class inside 'card' class */ 
+
+            &lt;div class="card"&gt;
+                &lt;div class="card-header"&gt;
+                    &lt;div class="badge"&gt;
+                        &lt;img class="avatar" src="url" alt="user"&gt;
+                        &lt;div class="online"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    Username
+                &lt;/div&gt;
+                &lt;img class="card-image" src="url" alt=""&gt;
+                &lt;div class="card-content"&gt;
+                    Your content
+                &lt;/div&gt;
+            &lt;/div&gt;
+    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Vertical eCommerce Card -->
+        <div class="content-head">eCommerce Card (vertical)</div>
+        <div class="content-subtitle">
+          eCommerce card contains a <span class="note">Product Image</span>,
+          <span class="note">Name</span>, <span class="note">Badge</span>
+          <span class="note">Wishlist</span> ,
+          <span class="note">Price</span> and a
+          <span class="note">Buttons</span>.
+        </div>
+        <div class="output">
+          <div class="card vertical">
+            <div class="card-image-container">
+              <img
+                class="card-image"
+                src="https://source.unsplash.com/3uuLWb6aQXc/"
+                alt="simple image"
+              />
+              <div class="card-badge">new</div>
+            </div>
+            <div class="main-content">
+              <div class="card-title">
+                Kimono
+                <i class="fas fa-heart wishlist"></i>
+              </div>
+              <div class="card-subtitle">Favorite choice of anime fans</div>
+              <div class="card-content">
+                The master Copy Cat Ninja, with Chidori! Feared among the other
+                villages as Kakashi of the Sharinghan.
+              </div>
+              <div class="card-pricing">
+                <span class="current-price">Rs. 675</span>
+                <span class="prev-price">Rs. 1349</span>
+                <span class="discount">(50% off)</span>
+              </div>
+              <div class="btn-group">
+                <button class="btn">Add to cart</button>
+                <button class="btn primary">Buy now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="code">
+          <pre>
+    <code class="html">
+    /* Using class 'card vertical' */ 
+
+    &lt;div class="card vertical"&gt;
+        &lt;div class="card-image-container"&gt;
+            &lt;img class="card-image" src="url" alt=""&gt;
+            &lt;div class="card-badge">new&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="main-content"&gt;
+        &lt;div class="card-title"&gt;
+                Kimono
+                &lt;i class="fas fa-heart wishlist"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class="card-subtitle"&gt;
+                Favorite choice of anime fans
+            &lt;/div&gt;
+            &lt;div class="card-content"&gt;
+                content
+            &lt;/div&gt;
+            &lt;div class="card-pricing"&gt;
+                &lt;span class="current-price"&gt;Rs. 675&lt;/span&gt;
+                &lt;span class="prev-price"&gt;Rs. 1349&lt;/span&gt;
+                &lt;span class="discount"&gt;(50% off)&lt;/span&gt;
+            &lt;/div>
+            &lt;div class="btn-group"&gt;
+                &lt;button class="btn"&gt;Add to cart&lt;/button&gt;
+                &lt;button class="btn primary"&gt;Buy now&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Horizontal eCommerce Card -->
+        <div class="content-head">eCommerce Card (horizontal)</div>
+        <div class="output">
+          <div class="card horizontal">
+            <div class="card-image-container">
+              <img
+                class="card-image"
+                src="https://source.unsplash.com/3uuLWb6aQXc/"
+                alt="simple image"
+              />
+              <div class="card-badge">new</div>
+            </div>
+            <div class="main-content">
+              <div class="card-title">
+                Kimono
+                <i class="fas fa-heart wishlist"></i>
+              </div>
+              <div class="card-subtitle">Favorite choice of anime fans</div>
+              <div class="card-content">
+                The master Copy Cat Ninja, with Chidori! Feared among the other
+                villages as Kakashi of the Sharinghan.
+              </div>
+              <div class="card-pricing">
+                <span class="current-price">Rs. 675</span>
+                <span class="prev-price">Rs. 1349</span>
+                <span class="discount">(50% off)</span>
+              </div>
+              <div class="btn-group">
+                <button class="btn">Add to cart</button>
+                <button class="btn primary">Buy now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="code">
+          <pre>
+    <code class="html">
+    /* Using class 'card horizontal' */ 
+
+    &lt;div class="card horizontal"&gt;
+        &lt;div class="card-image-container"&gt;
+            &lt;img class="card-image" src="url" alt=""&gt;
+            &lt;div class="card-badge">new&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="main-content"&gt;
+        &lt;div class="card-title"&gt;
+                Kimono
+                &lt;i class="fas fa-heart wishlist"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class="card-subtitle"&gt;
+                Favorite choice of anime fans
+            &lt;/div&gt;
+            &lt;div class="card-content"&gt;
+                content
+            &lt;/div&gt;
+            &lt;div class="card-pricing"&gt;
+                &lt;span class="current-price"&gt;Rs. 675&lt;/span&gt;
+                &lt;span class="prev-price"&gt;Rs. 1349&lt;/span&gt;
+                &lt;span class="discount"&gt;(50% off)&lt;/span&gt;
+            &lt;/div>
+            &lt;div class="btn-group"&gt;
+                &lt;button class="btn"&gt;Add to cart&lt;/button&gt;
+                &lt;button class="btn primary"&gt;Buy now&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <footer class="doc-footer">
+          <div class="prev-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="iconify iconify--grommet-icons"
+              width="1em"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                d="M15 6l-6 6l6 6"
+              ></path>
+            </svg>
+            <a href="../Button/button.html">Button</a>
+          </div>
+          <div class="next-link">
+            <a href="../Grid/grid.html">Grid</a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="iconify iconify--ic"
+              width="1em"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <section id="footer">
+      <header>
+        Made with <i class="fas fa-heart text-secondary"></i> by
+        <span class="text-secondary">Muskan Gupta</span>
+      </header>
+      <div class="social-links">
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-github"></i>
+      </div>
+      <span class="copyright text-light"
+        >&copy; 2023
+        <span class="text-primary text-bold">UI-Library</span></span
+      >
+    </section>
+    <button title="Top" class="btn floating-btn primary" data-top>
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"
+      integrity="sha512-IaaKO80nPNs5j+VLxd42eK/7sYuXQmr+fyywCNA0e+C6gtQnuCXNtORe9xR4LqGPz5U9VpH+ff41wKs/ZmC3iA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

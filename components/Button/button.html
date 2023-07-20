@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/assets/favicon/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/a11y-light.min.css"
+      integrity="sha512-WDk6RzwygsN9KecRHAfm9HTN87LQjqdygDmkHSJxVkVI7ErCZ8ZWxP6T8RvBujY1n2/E4Ac+bn2ChXnp5rnnHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/component.css" />
+    <script src="/index.js" defer></script>
+    <title>UI-Library | Button</title>
+  </head>
+
+  <body>
+    <nav class="navbar nav-main">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="/">
+            <img
+              class="img img-responsive"
+              src="/assets/ui-logo.png"
+              alt="logo"
+            />
+          </a>
+        </div>
+        <div class="drawer-container">
+          <button class="btn outline-primary" data-drawer>
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="backdrop"></div>
+          <div class="drawer">
+            <header>
+              <img
+                class="img img-responsive"
+                src="/assets/ui-logo.png"
+                alt="logo"
+              />
+            </header>
+            <ul class="list drawer-list">
+              <div class="list-title text-bold">Starting Guide</div>
+              <li><a href="/Color/color.html">Color</a></li>
+            </ul>
+            <ul class="list drawer-list">
+              <div class="list-title text-bold">Components</div>
+              <li><a href="/components/Avatar/avatar.html">Avatar</a></li>
+              <li><a href="/components/Alert/alert.html">Alert</a></li>
+              <li><a href="/components/Badge/badge.html">Badge</a></li>
+              <li class="text-primary text-bold"><a href="#">Button</a></li>
+              <li><a href="/components/Card/card.html">Card</a></li>
+              <li><a href="/components/Grid/">Grid</a></li>
+              <li><a href="/components/Image/image.html">Image</a></li>
+              <li><a href="/components/Input/input.html">Input</a></li>
+              <li><a href="/components/List/list.html">List</a></li>
+              <li><a href="/components/Modal/modal.html">Modal</a></li>
+              <li><a href="/components/Navbar/navbar.html">Navbar</a></li>
+              <li><a href="/components/Rating/rating.html">Rating</a></li>
+              <li><a href="/components/Slider/slider.html">Slider</a></li>
+              <li>
+                <a href="/components/Typography/typography.html">Typography</a>
+              </li>
+              <li><a href="/components/Toast/toast.html">Toast</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav-links">
+          <i class="fas fa-moon theme-icon"></i>
+          <a
+            href="/components/Avatar/avatar.html"
+            class="text-primary text-bold"
+            ><i class="fas fa-file"></i><span>Docs</span></a
+          >
+          <a
+            href="https://github.com/GMuskan"
+            target="_blank"
+            class="text-primary text-bold"
+          >
+            <button class="btn outline-primary">
+              <i class="fab fa-github"></i> GitHub
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="doc-container">
+      <aside class="sidebar">
+        <div class="list">
+          <div class="list-title text-bold">Starting Guide</div>
+          <li><a href="/Color/color.html">Color</a></li>
+        </div>
+        <div class="list">
+          <div class="list-title text-bold">Components</div>
+          <li><a href="/components/Avatar/avatar.html">Avatar</a></li>
+          <li><a href="/components/Alert/alert.html">Alert</a></li>
+          <li><a href="/components/Badge/badge.html">Badge</a></li>
+          <li class="text-primary text-bold"><a href="#">Button</a></li>
+          <li><a href="/components/Card/card.html">Card</a></li>
+          <li><a href="/components/Grid/grid.html">Grid</a></li>
+          <li><a href="/components/Image/image.html">Image</a></li>
+          <li><a href="/components/Input/input.html">Input</a></li>
+          <li><a href="/components/List/list.html">List</a></li>
+          <li><a href="/components/Modal/modal.html">Modal</a></li>
+          <li><a href="/components/Navbar/navbar.html">Navbar</a></li>
+          <li><a href="/components/Rating/rating.html">Rating</a></li>
+          <li>
+            <a href="/components/Typography/typography.html">Typography</a>
+          </li>
+          <li><a href="/components/Toast/toast.html">Toast</a></li>
+        </div>
+      </aside>
+      <main class="doc-content">
+        <header class="content-title">Button</header>
+        <div class="content-subtitle">
+          Buttons are very cruical part of any web applications. It allows user
+          to interact with the application like submitting form, sending text,
+          etc.
+        </div>
+        <div class="divider"></div>
+
+        <!-- Default buttons -->
+        <div class="content-head">Normal Button</div>
+        <div class="content-subtitle">
+          These buttons are used to grab user's attention as they are filled
+          with specific colors. To use this, put class
+          <code class="text-bold">&nbsp;btn&nbsp;</code> and
+          <code>variant</code> name.
+        </div>
+        <div class="output">
+          <button class="btn">default</button>
+          <button class="btn primary">Primary</button>
+          <button class="btn secondary">Secondary</button>
+          <button class="btn error">Error</button>
+          <button class="btn success">Success</button>
+        </div>
+
+        <div class="code">
+          <pre>
+                    <code class="html">
+    /* Using the 'button' class on button along with 'variant' */ 
+
+                &lt;button class="btn"&gt;default&lt;/button&gt;
+                &lt;button class="btn primary"&gt;primary&lt;/button&gt;
+                &lt;button class="btn secondary"&gt;secondary&lt;/button&gt;
+                &lt;button class="btn error"&gt;error&lt;/button&gt;
+                &lt;button class="btn success"&gt;success&lt;/button&gt;
+                    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Outlined Button -->
+        <div class="content-head">Outline Button</div>
+        <div class="content-subtitle">
+          Outline buttons serves the purpose when you want to add a
+          functionality and don't want to grab immediate user's attention. To
+          use this, include <code class="text-bold">outline </code> along with
+          <code class="text-bold">outline-variant</code> within
+          <code>button</code> tag.
+        </div>
+        <div class="output">
+          <button class="btn outline">default</button>
+          <button class="btn outline-primary">Primary</button>
+          <button class="btn outline-secondary">Secondary</button>
+          <button class="btn outline-error">Error</button>
+          <button class="btn outline-success">Success</button>
+        </div>
+
+        <div class="code">
+          <pre>
+                    <code class="html">
+    /* Using the 'outline-variant' class on button. */ 
+
+        &lt;button class="btn outline"&gt;default&lt;/button&gt;
+        &lt;button class="btn outline-primary"&gt;primary&lt;/button&gt;
+        &lt;button class="btn outline-secondary"&gt;secondary&lt;/button&gt;
+        &lt;button class="btn outline-error"&gt;error&lt;/button&gt;
+        &lt;button class="btn outline-success"&gt;success&lt;/button&gt;
+                    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Icon Button -->
+        <div class="content-head">Icon Button</div>
+        <div class="content-subtitle">
+          Icon buttons can be created using icons along with button text. Use
+          class <code class="text-bold">icon-btn</code>.
+        </div>
+        <div class="output">
+          <button class="btn icon-btn">
+            <i class="fas fa-save"></i>
+            Save
+          </button>
+          <button class="btn icon-btn">
+            <i class="fas fa-reply"></i>
+            Reply
+          </button>
+        </div>
+
+        <div class="code">
+          <pre>
+                    <code class="html">
+    /* Using the 'icon-btn' class on button */ 
+
+            &lt;button class="btn icon-btn"&gt;
+                &lt;i class="your icon"&gt;&lt;/i&gt;
+                Save
+            &lt;/button&gt;
+            &lt;button class="btn icon-btn"&gt;
+                &lt;i class="your icon"&gt;&lt;/i&gt;
+                Reply
+            &lt;/button&gt;
+                    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Link Button -->
+        <div class="content-head">Link Button</div>
+        <div class="content-subtitle">
+          Link buttons can be created using class
+          <code class="text-bold">btn-link</code> on <code>a</code> tag.
+        </div>
+        <div class="output">
+          <button class="btn icon-btn">
+            <a class="btn-link" href="#">
+              <i class="fas fa-link"></i>
+              link
+            </a>
+          </button>
+        </div>
+
+        <div class="code">
+          <pre>
+                    <code class="html">
+    /* Using the 'btn-link' class on 'a' tag */ 
+
+            &lt;button class="btn icon-btn"&gt;
+                &lt;a class="btn-link"&gt;
+                    &lt;i class="your icon"&gt;&lt;/i&gt;
+                    Link
+                &lt;/a&gt;
+            &lt;/button&gt;
+                    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Disabled Button -->
+        <div class="content-head">Disabled Button</div>
+        <div class="content-subtitle">
+          In order to use disabled buttons, include
+          <code class="text-bold">disabled</code> attribute within
+          <code>button</code> tag.
+        </div>
+        <div class="output">
+          <button class="btn primary" disabled>Disabled</button>
+        </div>
+
+        <div class="code">
+          <pre>
+                    <code class="html">
+            &lt;button class="btn primary"&gt;Disabled&lt;/button&gt;
+                    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Floating Action Button -->
+        <div class="content-head">Floating Action Button</div>
+        <div class="content-subtitle">
+          Floating action buttons provides a better user experience by allowing
+          user to acess most used feature. Use
+          <code class="text-bold">floating-btn</code> class within
+          <code>button</code> tag.
+        </div>
+        <div class="output">
+          <button class="btn floating-btn primary">
+            <i class="fas fa-location-arrow"></i>
+          </button>
+        </div>
+
+        <div class="code">
+          <pre>
+                    <code class="html">
+            &lt;button class="btn floating-btn primary"&gt;
+                &lt;i class="your icon"&gt;&lt;/i&gt;
+            &lt;/button&gt;
+                    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <footer class="doc-footer">
+          <div class="prev-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="iconify iconify--grommet-icons"
+              width="1em"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                d="M15 6l-6 6l6 6"
+              ></path>
+            </svg>
+            <a href="../Badge/badge.html">Badge</a>
+          </div>
+          <div class="next-link">
+            <a href="../Card/card.html">Card</a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="iconify iconify--ic"
+              width="1em"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <section id="footer">
+      <header>
+        Made with <i class="fas fa-heart text-secondary"></i> by
+        <span class="text-secondary">Muskan Gupta</span>
+      </header>
+      <div class="social-links">
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-github"></i>
+      </div>
+      <span class="copyright text-light"
+        >&copy; 2023
+        <span class="text-primary text-bold">UI-Library</span></span
+      >
+    </section>
+    <button title="Top" class="btn floating-btn primary" data-top>
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"
+      integrity="sha512-IaaKO80nPNs5j+VLxd42eK/7sYuXQmr+fyywCNA0e+C6gtQnuCXNtORe9xR4LqGPz5U9VpH+ff41wKs/ZmC3iA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

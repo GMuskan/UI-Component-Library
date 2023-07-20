@@ -1,0 +1,32 @@
+.submit-review {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  cursor: pointer;
+}
+
+.rating .rating-icon {
+  transition: all 0.3s ease;
+}
+
+.rating input:enabled + .rating-icon:hover {
+  color: var(--color-warning-light);
+}
+
+.rating input:checked + .rating-icon {
+  color: var(--color-warning);
+}

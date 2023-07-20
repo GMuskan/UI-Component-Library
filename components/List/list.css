@@ -1,0 +1,69 @@
+.list {
+  background-color: var(--color-tertiary);
+  padding: 1rem;
+  max-width: 30rem;
+  width: 100%;
+  margin: 1rem;
+  border-radius: var(--border-radius-3);
+}
+
+.list li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-size: inherit;
+  padding: 0.7rem 1.35rem;
+  border-radius: var(--border-radius-3);
+  transition: all 0.3s;
+}
+
+.list li:not(.nested-list):hover {
+  cursor: pointer;
+  background-color: var(--color-tertiary-dark);
+  /* color: var(--color-tertiary); */
+}
+
+.list .list-title {
+  padding: 0 1rem 1rem;
+  border-bottom: 1px solid var(--color-tertiary-dark);
+}
+
+/* Nested List */
+
+.list .nested-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0.7rem 1.35rem 0;
+}
+
+.list .nested-list div {
+  width: 100%;
+  cursor: pointer;
+  padding: 0 0 0.7rem;
+  transition: all 0.3s ease-in-out;
+  border-radius: var(--border-radius-3);
+}
+
+.list .nested-list li {
+  padding: 0.7rem 1.35rem;
+}
+
+/*stacked list */
+.list.stacked {
+  width: 100%;
+  max-width: 40rem;
+  border-radius: var(--border-radius-3);
+}
+
+.list.stacked li > .img{
+  width: 5rem;
+  height: 5rem;
+}
+
+.stacked-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid var(--color-tertiary-dark);
+}

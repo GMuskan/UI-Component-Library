@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/assets/favicon/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/a11y-light.min.css"
+      integrity="sha512-WDk6RzwygsN9KecRHAfm9HTN87LQjqdygDmkHSJxVkVI7ErCZ8ZWxP6T8RvBujY1n2/E4Ac+bn2ChXnp5rnnHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/component.css" />
+    <script src="/index.js" defer></script>
+    <title>UI-Library | Input</title>
+  </head>
+
+  <body>
+    <nav class="navbar nav-main">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="/">
+            <img
+              class="img img-responsive"
+              src="/assets/ui-logo.png"
+              alt="logo"
+            />
+          </a>
+        </div>
+        <div class="drawer-container">
+          <button class="btn outline-primary" data-drawer>
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="backdrop"></div>
+          <div class="drawer">
+            <header>
+              <img
+                class="img img-responsive"
+                src="/assets/ui-logo.png"
+                alt="logo"
+              />
+            </header>
+            <ul class="list drawer-list">
+              <div class="list-title text-bold">Starting Guide</div>
+              <li><a href="/Color/color.html">Color</a></li>
+            </ul>
+            <ul class="list drawer-list">
+              <div class="list-title text-bold">Components</div>
+              <li><a href="/components/Avatar/avatar.html">Avatar</a></li>
+              <li><a href="/components/Alert/alert.html">Alert</a></li>
+              <li><a href="/components/Badge/badge.html">Badge</a></li>
+              <li><a href="/components/Button/button.html">Button</a></li>
+              <li><a href="/components/Card/card.html">Card</a></li>
+              <li><a href="/components/Grid/grid.html">Grid</a></li>
+              <li><a href="/components/Image/image.html">Image</a></li>
+              <li class="text-primary text-bold"><a href="#">Input</a></li>
+              <li><a href="/components/List/list.html">List</a></li>
+              <li><a href="/components/Modal/modal.html">Modal</a></li>
+              <li><a href="/components/Navbar/navbar.html">Navbar</a></li>
+              <li><a href="/components/Rating/rating.html">Rating</a></li>
+              <li><a href="/components/Slider/slider.html">Slider</a></li>
+              <li>
+                <a href="/components/Typography/typography.html">Typography</a>
+              </li>
+              <li><a href="/components/Toast/toast.html">Toast</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav-links">
+          <i class="fas fa-moon theme-icon"></i>
+          <a
+            href="/components/Avatar/avatar.html"
+            class="text-primary text-bold"
+            ><i class="fas fa-file"></i><span>Docs</span></a
+          >
+          <a
+            href="https://github.com/GMuskan"
+            target="_blank"
+            class="text-primary text-bold"
+          >
+            <button class="btn outline-primary">
+              <i class="fab fa-github"></i> GitHub
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="doc-container">
+      <aside class="sidebar">
+        <div class="list">
+          <div class="list-title text-bold">Starting Guide</div>
+          <li><a href="/Color/color.html">Color</a></li>
+        </div>
+        <div class="list">
+          <div class="list-title text-bold">Components</div>
+          <li><a href="/components/Avatar/avatar.html">Avatar</a></li>
+          <li><a href="/components/Alert/alert.html">Alert</a></li>
+          <li><a href="/components/Badge/badge.html">Badge</a></li>
+          <li><a href="/components/Button/button.html">Button</a></li>
+          <li><a href="/components/Card/card.html">Card</a></li>
+          <li><a href="/components/Grid/grid.html">Grid</a></li>
+          <li><a href="/components/Image/image.html">Image</a></li>
+          <li class="text-primary text-bold"><a href="#">Input</a></li>
+          <li><a href="/components/List/list.html">List</a></li>
+          <li><a href="/components/Modal/modal.html">Modal</a></li>
+          <li><a href="/components/Navbar/navbar.html">Navbar</a></li>
+          <li><a href="/components/Rating/rating.html">Rating</a></li>
+          <li><a href="/components/Slider/slider.html">Slider</a></li>
+          <li>
+            <a href="/components/Typography/typography.html">Typography</a>
+          </li>
+          <li><a href="/components/Toast/toast.html">Toast</a></li>
+        </div>
+      </aside>
+      <main class="doc-content">
+        <header class="content-title">Input</header>
+        <div class="content-subtitle">
+          Inputs are the go to choice when we want to collect data from the
+          user. Input elements plays a vital role in accepting data and send
+          data to the server.
+        </div>
+        <div class="divider"></div>
+
+        <!-- Normal input -->
+        <div class="content-head">Normal Input</div>
+        <div class="content-subtitle">
+          These are normally labelled input fields. It has two categories
+          <span class="note">simple input</span> and
+          <span class="note">error input</span>. Use
+          <code class="text-bold">&nbsp;input-grp&nbsp;</code> on the container.
+        </div>
+        <div class="output">
+          <div class="input-grp">
+            <label for="username">Email</label>
+            <input type="email" placeholder="example@example.com" />
+          </div>
+
+          <div class="input-grp required err">
+            <label for="password">Password</label>
+            <input placeholder="Password" type="password" />
+            <div class="err-msg">Please enter valid input</div>
+          </div>
+        </div>
+
+        <div class="code">
+          <pre>
+                    <code class="html">
+            /* Using the 'input-grp' class */ 
+            &lt;div class="input-grp"&gt;
+                &lt;label for="username"&gt;Email&lt;/label&gt;
+                &lt;input type="email" placeholder="example@example.com"&gt;
+            &lt;/div&gt;
+
+            &lt;div class="input-grp required err"&gt;
+                &lt;label for="password"&gt;Password&lt;/label&gt;
+                &lt;input placeholder="Password" type="password"&gt;
+                &lt;div class="err-msg"&gt;Please enter valid input&lt;/div&gt;
+            &lt;/div&gt;
+            
+                    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Fancy input -->
+        <div class="content-head">Fancy Input</div>
+        <div class="content-subtitle">
+          These inputs are better styled for improved user interface. Use
+          <code class="text-bold">&nbsp;fancy&nbsp;</code> on the container
+          along with <code class="text-bold">input-grp</code>
+        </div>
+        <div class="output">
+          <div class="input-grp fancy">
+            <input type="email" placeholder="Email" />
+            <label for="email">Email</label>
+          </div>
+
+          <div class="input-grp fancy required err">
+            <div class="err-msg">Please enter valid input</div>
+            <input placeholder="Password" type="password" />
+            <label for="password">Password</label>
+          </div>
+        </div>
+
+        <div class="code">
+          <pre>
+                    <code class="html">
+            /* Using the 'fancy' class inside 'input-grp' */ 
+            &lt;div class="input-grp fancy"&gt;
+                &lt;label for="username"&gt;Email&lt;/label&gt;
+                &lt;input type="email" placeholder="example@example.com"&gt;
+            &lt;/div&gt;
+
+            &lt;div class="input-grp fancy required err"&gt;
+                &lt;div class="err-msg"&gt;Please enter valid input&lt;/div&gt;
+                &lt;input placeholder="Password" type="password"&gt;
+                &lt;label for="password"&gt;Password&lt;/label&gt;
+            &lt;/div&gt;
+            
+                    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <!-- TextArea -->
+        <div class="content-head">TextArea</div>
+        <div class="content-subtitle">
+          To use text-area input, use
+          <code class="text-bold">&nbsp;input-area&nbsp;</code> in
+          <code>textarea</code>
+        </div>
+        <div class="output">
+          <textarea
+            class="input-area"
+            placeholder="Enter your message here..."
+            name="input"
+          ></textarea>
+        </div>
+
+        <div class="code">
+          <pre>
+                    <code class="html">
+            /* Using the 'input-area' class */ 
+            &lt;textarea class="input-area" placeholder="" name=""&gt;&lt;/textarea&gt;
+            
+                    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Radio inputs -->
+        <div class="content-head">Radio Input</div>
+        <div class="content-subtitle">
+          Radio buttons are very handy when there's only need of only one option
+          from a set of options.
+        </div>
+        <div class="output">
+          <div class="radio-grp">
+            <input type="radio" checked name="radio" id="radio_1" />
+            <label for="radio_1">
+              <span class="radio-btn"></span>
+              Checked</label
+            >
+          </div>
+          <div class="radio-grp">
+            <input type="radio" name="radio" id="radio_2" />
+            <label for="radio_2"
+              ><span class="radio-btn"></span>Unchecked</label
+            >
+          </div>
+          <div class="radio-grp">
+            <input type="radio" disabled name="radio" id="radio_2" />
+            <label for="radio_2"><span class="radio-btn"></span>Disabled</label>
+          </div>
+        </div>
+
+        <div class="code">
+          <pre>
+                    <code class="html">
+    /* Using the 'radio-grp' class on the container and 'radio-btn' class on the span */ 
+
+        &lt;div class="radio-grp"&gt;
+            &lt;input type="radio" checked name="radio" id="radio_1"&gt;
+            &lt;label for="radio_1"&gt;
+                &lt;span class="radio-btn"&gt;&lt;/span&gt;
+                Checked&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="radio-grp"&gt;
+            &lt;input type="radio" name="radio" id="radio_2"&gt;
+            &lt;label for="radio_2"&gt;&lt;span class="radio-btn"&gt;&lt;/span>Unchecked&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="radio-grp"&gt;
+            &lt;input type="radio" disabled name="radio" id="radio_2"&gt;
+            &lt;label for="radio_2"&gt;&lt;span class="radio-btn"&gt;&lt;/span>Disabled&lt;/label&gt;
+        &lt;/div&gt;
+                    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Checbox input -->
+        <div class="content-head">Checbox</div>
+        <div class="content-subtitle">
+          Checkboxes buttons are very useful when we require multiple choices
+          from a set of options.
+        </div>
+        <div class="output">
+          <div class="checkbox-grp">
+            <input type="checkbox" checked id="checked" />
+            <label for="checked">Checked</label>
+          </div>
+          <div class="checkbox-grp">
+            <input type="checkbox" id="unchecked" />
+            <label for="unchecked">Unchecked</label>
+          </div>
+          <div class="checkbox-grp">
+            <input type="checkbox" disabled id="disabled" />
+            <label for="disabled">Disabled</label>
+          </div>
+        </div>
+
+        <div class="code">
+          <pre>
+                    <code class="html">
+    /* Using the 'checkbox-grp' class on the container */ 
+
+        &lt;div class="checkbox-grp"&gt;
+            &lt;input type="checkbox" checked id="checked"&gt;
+            &lt;label for="checked"&gt;Checked&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="checkbox-grp"&gt;
+            &lt;input type="checkbox" id="unchecked"&gt;
+            &lt;label for="unchecked"&gt;Unchecked&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="checkbox-grp"&gt;
+            &lt;input type="checkbox" disabled id="disabled"&gt;
+            &lt;label for="disabled"&gt;Disabled&lt;/label&gt;
+        &lt;/div&gt;
+                    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <footer class="doc-footer">
+          <div class="prev-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="iconify iconify--grommet-icons"
+              width="1em"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                d="M15 6l-6 6l6 6"
+              ></path>
+            </svg>
+            <a href="../Image/image.html">Image</a>
+          </div>
+          <div class="next-link">
+            <a href="../List/list.html">List</a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="iconify iconify--ic"
+              width="1em"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <section id="footer">
+      <header>
+        Made with <i class="fas fa-heart text-secondary"></i> by
+        <span class="text-secondary">Muskan Gupta</span>
+      </header>
+      <div class="social-links">
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-github"></i>
+      </div>
+      <span class="copyright text-light"
+        >&copy; 2023
+        <span class="text-primary text-bold">UI-Library</span></span
+      >
+    </section>
+    <button title="Top" class="btn floating-btn primary" data-top>
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"
+      integrity="sha512-IaaKO80nPNs5j+VLxd42eK/7sYuXQmr+fyywCNA0e+C6gtQnuCXNtORe9xR4LqGPz5U9VpH+ff41wKs/ZmC3iA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

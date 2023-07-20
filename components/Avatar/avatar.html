@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/favicon/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/a11y-light.min.css"
+        integrity="sha512-WDk6RzwygsN9KecRHAfm9HTN87LQjqdygDmkHSJxVkVI7ErCZ8ZWxP6T8RvBujY1n2/E4Ac+bn2ChXnp5rnnHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/component.css">
+    <script src="/index.js" defer></script>
+    <title>UI-Library | Avatar</title>
+</head>
+
+<body>
+    <nav class="navbar nav-main">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/">
+                    <img class="img img-responsive" src="/assets/ui-logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="drawer-container">
+                <button class="btn outline-primary" data-drawer><i class="fa-solid fa-bars"></i></button>
+                <div class="backdrop"></div>
+                <div class="drawer">
+                    <header><img class="img img-responsive" src="/assets/ui-logo.png" alt="logo"></header>
+                    <ul class="list drawer-list">
+                        <div class="list-title text-bold">Starting Guide</div>
+                        <li><a href="/Color/color.html">Color</a></li>
+                    </ul>
+                    <ul class="list drawer-list">
+                        <div class="list-title text-bold">Components</div>
+                        <li class="text-primary text-bold"><a href="#">Avatar</a></li>
+                        <li><a href="/components/Alert/alert.html">Alert</a></li>
+                        <li><a href="/components/Badge/badge.html">Badge</a></li>
+                        <li><a href="/components/Button/button.html">Button</a></li>
+                        <li><a href="/components/Card/card.html">Card</a></li>
+                        <li><a href="/components/Grid/grid.html">Grid</a></li>
+                        <li><a href="/components/Image/image.html">Image</a></li>
+                        <li><a href="/components/Input/input.html">Input</a></li>
+                        <li><a href="/components/List/list.html">List</a></li>
+                        <li><a href="/components/Modal/modal.html">Modal</a></li>
+                        <li><a href="/components/Navbar/navbar.html">Navbar</a></li>
+                        <li><a href="/components/Rating/rating.html">Rating</a></li>
+                        <li><a href="/components/Slider/slider.html">Rating</a></li>
+                        <li><a href="/components/Typography/typography.html">Typography</a></li>
+                        <li><a href="/components/Toast/toast.html">Toast</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-links">
+                <i class="fas fa-moon theme-icon"></i>
+                <a href="/components/Avatar/avatar.html" class="text-primary text-bold"><i
+                        class="fas fa-file"></i><span>Docs</span></a>
+                <a href="https://github.com/GMuskan" target="_blank" class="text-primary text-bold">
+                    <button class="btn outline-primary">
+                        <i class="fab fa-github"></i> GitHub
+                    </button>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="doc-container">
+        <aside class="sidebar">
+            <div class="list">
+                <div class="list-title text-bold">Starting Guide</div>
+                <li><a href="/Color/color.html">Color</a></li>
+            </div>
+            <div class="list">
+                <div class="list-title text-bold">Components</div>
+                <li class="text-primary text-bold"><a href="/components/Avatar/avatar.html">Avatar</a></li>
+                <li><a href="/components/Alert/alert.html">Alert</a></li>
+                <li><a href="/components/Badge/badge.html">Badge</a></li>
+                <li><a href="/components/Button/button.html">Button</a></li>
+                <li><a href="/components/Card/card.html">Card</a></li>
+                <li><a href="/components/Grid/grid.html">Grid</a></li>
+                <li><a href="/components/Image/image.html">Image</a></li>
+                <li><a href="/components/Input/input.html">Input</a></li>
+                <li><a href="/components/List/list.html">List</a></li>
+                <li><a href="/components/Modal/modal.html">Modal</a></li>
+                <li><a href="/components/Navbar/navbar.html">Navbar</a></li>
+                <li><a href="/components/Rating/rating.html">Rating</a></li>
+                <li><a href="/components/Slider/slider.html">Slider</a></li>
+                <li><a href="/components/Typography/typography.html">Typography</a></li>
+                <li><a href="/components/Toast/toast.html">Toast</a></li>
+            </div>
+        </aside>
+        <main class="doc-content">
+            <header class="content-title">
+                Avatar
+            </header>
+            <div class="content-subtitle">
+                Avatars are used to display user profile pictures, usually found in circular shapes on navigation bars,
+                blogs, social media profiles, etc.
+            </div>
+            <div class="divider"></div>
+
+            <!-- Normal Avatar -->
+            <div class="content-head">
+                Normal Avatars for profiles
+            </div>
+            <div class="content-subtitle">
+                For Normal Avatars use the class <code class="text-bold">&nbsp;avatar&nbsp;</code>, inside the <code
+                    class="text-bold">&nbsp;img&nbsp;</code>
+                tag.
+            </div>
+            <div class="output">
+                <img class="avatar" src="https://source.unsplash.com/3uuLWb6aQXc/" alt="avatar_1">
+                <img class="avatar" src="https://source.unsplash.com/DomqHKN2Xik/" alt="avatar_2">
+                <img class="avatar" src="https://source.unsplash.com/3TLl_97HNJo/" alt="avatar_3">
+            </div>
+
+            <div class="code">
+                <pre>
+                    <code class="html">
+                        /* Using the 'avatar' class name */ 
+
+                &lt;img class="avatar" src="url-of-image" alt="avatar_1"&gt;
+                &lt;img class="avatar" src="" alt="avatar_2"&gt;
+                    </code></pre>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Different Sized Avatar -->
+            <div class="content-head">
+                Sized Avatars
+            </div>
+            <div class="content-subtitle">
+                Different sizes of avatars are <code class="text-bold">&nbsp;sm | md | lg&nbsp;</code> tag.
+            </div>
+            <div class="output">
+                <img class="avatar sm" src="https://source.unsplash.com/3uuLWb6aQXc/" alt="avatar_1">
+                <img class="avatar md" src="https://source.unsplash.com/3uuLWb6aQXc/" alt="avatar_2">
+                <img class="avatar lg" src="https://source.unsplash.com/3uuLWb6aQXc/" alt="avatar_3">
+            </div>
+
+            <div class="code">
+                <pre>
+                    <code class="html">
+                        /* Using the 'sm | md | lg' class name */ 
+
+                &lt;img class="avatar sm" src="url-of-image" alt="avatar_1"&gt;
+                &lt;img class="avatar md" src="url-of-image" alt="avatar_2"&gt;
+                &lt;img class="avatar lg" src="url-of-image" alt="avatar_3"&gt;
+                    </code></pre>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Squared Avatar -->
+            <div class="content-head">
+                Squared Avatars
+            </div>
+            <div class="content-subtitle">
+                Add a class <code class="text-bold">&nbsp;square&nbsp;</code> to the tag will acheive the square avatar.
+                <div class="note">Note: 'square' class does not support svgs yet.</div>
+            </div>
+            <div class="output">
+                <img class="avatar square sm" src="https://source.unsplash.com/3uuLWb6aQXc/" alt="avatar_1">
+                <img class="avatar square md" src="https://source.unsplash.com/3uuLWb6aQXc/" alt="avatar_2">
+                <img class="avatar square lg" src="https://source.unsplash.com/3uuLWb6aQXc/" alt="avatar_3">
+            </div>
+
+            <div class="code">
+                <pre>
+                    <code class="html">
+                        /* Using the 'square' class name */ 
+
+            &lt;img class="avatar square sm" src="url-of-image" alt="avatar_1"&gt;
+            &lt;img class="avatar square md" src="url-of-image" alt="avatar_2"&gt;
+            &lt;img class="avatar square lg" src="url-of-image" alt="avatar_3"&gt;
+                    </code></pre>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Text Avatar -->
+            <div class="content-head">
+                Text Avatar
+            </div>
+            <div class="content-subtitle">
+                Text Avatars are used when profile pictures are not available. To use them, include <code
+                    class="text-bold">&nbsp;avatar-text&nbsp;</code>
+                tag.
+            </div>
+            <div class="output">
+                <div class="avatar avatar-text sm">
+                    SM
+                </div>
+                <div class="avatar avatar-text md">
+                    MD
+                </div>
+                <div class="avatar avatar-text lg">
+                    LG
+                </div>
+            </div>
+
+            <div class="code">
+                <pre>
+                    <code class="html">
+                        /* Using the 'avatar-text' class name */ 
+
+            &lt;div class="avatar avatar-text sm" src="url" alt="avatar_1"&gt;&lt;/div&gt;
+            &lt;div class="avatar avatar-text md" src="url" alt="avatar_2"&gt;&lt;/div&gt;
+            &lt;div class="avatar avatar-text lg" src="url" alt="avatar_3"&gt;&lt;/div&gt;
+                    </code></pre>
+            </div>
+            <div class="divider"></div>
+            <footer class="doc-footer">
+                <div class="prev-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true" role="img" class="iconify iconify--grommet-icons" width="1em" height="1em"
+                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-width="2" d="M15 6l-6 6l6 6"></path>
+                    </svg>
+                    <a href="/index.html">Home</a>
+                </div>
+                <div class="next-link">
+                    <a href="../Alert/alert.html">Alert</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true" role="img" class="iconify iconify--ic" width="1em" height="1em"
+                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <path d="M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor"></path>
+                    </svg>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <section id="footer">
+        <header>Made with <i class="fas fa-heart text-secondary"></i> by <span class="text-secondary">Muskan Gupta</span>
+        </header>
+        <div class="social-links">
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-github"></i>
+        </div>
+        <span class="copyright text-light">&copy; 2023 <span class="text-primary text-bold">UI-Library</span></span>
+    </section>
+    <button title="Top" class="btn floating-btn primary" data-top>
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"
+        integrity="sha512-IaaKO80nPNs5j+VLxd42eK/7sYuXQmr+fyywCNA0e+C6gtQnuCXNtORe9xR4LqGPz5U9VpH+ff41wKs/ZmC3iA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>

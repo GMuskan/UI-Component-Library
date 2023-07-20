@@ -1,0 +1,90 @@
+.toast {
+  width: max-content;
+  padding: 1rem 1.6rem;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--color-default);
+  color: var(--color-tertiary);
+  display: none;
+  z-index: 15;
+  border-radius: var(--border-radius-3);
+}
+
+.toast.outline {
+  background-color: var(--color-tertiary);
+  color: var(--color-default);
+  outline: var(--color-default) solid 1px;
+}
+.toast.outline.primary {
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+  outline: var(--color-primary) solid 1px;
+}
+.toast.outline.secondary {
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+  outline: var(--color-secondary) solid 1px;
+}
+.toast.outline.error {
+  background-color: var(--color-tertiary);
+  color: var(--color-error);
+  outline: var(--color-error) solid 1px;
+}
+.toast.outline.success {
+  background-color: var(--color-tertiary);
+  color: var(--color-success);
+  outline: var(--color-success) solid 1px;
+}
+.toast.outline.info {
+  background-color: var(--color-tertiary);
+  color: var(--color-info);
+  outline: var(--color-info) solid 1px;
+}
+
+.toast.primary {
+  background-color: var(--color-primary);
+}
+
+.toast.secondary {
+  background-color: var(--color-secondary);
+}
+
+.toast.success {
+  background-color: var(--color-success);
+}
+
+.toast.error {
+  background-color: var(--color-error);
+}
+
+.toast.info {
+  background-color: var(--color-info);
+}
+
+.btn-close {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.btn-close::before {
+  content: "\2715";
+  font-size: 1.6rem;
+  color: var(--color-tertiary);
+  transition: color 0.3s;
+}
+
+.toast.outline .btn-close::before {
+  color: var(--color-grey-dark);
+}
+
+.btn-close:hover::before {
+  color: var(--color-tertiary-dark);
+}
+
+.toast.outline .btn-close:hover::before {
+  color: var(--color-grey-dark-3);
+}

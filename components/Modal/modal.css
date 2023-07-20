@@ -1,0 +1,112 @@
+.modal-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-content {
+  max-width: 60rem;
+  width: 100%;
+  height: 50vh;
+  padding: 1rem 1.8rem;
+  background-color: var(--color-tertiary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: var(--border-radius-3);
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(200%);
+}
+
+.modal-container.active .modal-content {
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0%);
+}
+
+.with-header {
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.modal-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-tertiary-dark);
+}
+
+.modal-close {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.modal-close::before {
+  content: "\2715";
+  font-size: 2rem;
+  color: var(--color-grey-dark);
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  transition: color 0.3s;
+}
+
+.modal-close:hover::before {
+  color: var(--color-grey-dark-3);
+}
+
+.modal-text {
+  margin: 1.5rem 0;
+}
+
+.with-header .modal-text {
+  margin-bottom: auto;
+}
+
+.cta-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.with-header .cta-container {
+  justify-content: flex-end;
+}
+
+.cta-container > *:not(:last-child) {
+  margin: 0 1rem;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal-content {
+    max-width: 55rem;
+    height: 40vh;
+  }
+}

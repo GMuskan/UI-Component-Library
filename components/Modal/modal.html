@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/assets/favicon/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/a11y-light.min.css"
+      integrity="sha512-WDk6RzwygsN9KecRHAfm9HTN87LQjqdygDmkHSJxVkVI7ErCZ8ZWxP6T8RvBujY1n2/E4Ac+bn2ChXnp5rnnHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/component.css" />
+    <script type="module" src="./modal.js"></script>
+    <script src="/index.js" defer></script>
+    <title>UI-Library | Modal</title>
+  </head>
+
+  <body>
+    <nav class="navbar nav-main">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="/">
+            <img
+              class="img img-responsive"
+              src="/assets/ui-logo.png"
+              alt="logo"
+            />
+          </a>
+        </div>
+        <div class="drawer-container">
+          <button class="btn outline-primary" data-drawer>
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="backdrop"></div>
+          <div class="drawer">
+            <header>
+              <img
+                class="img img-responsive"
+                src="/assets/ui-logo.png"
+                alt="logo"
+              />
+            </header>
+            <ul class="list drawer-list">
+              <div class="list-title text-bold">Starting Guide</div>
+              <li><a href="/Color/color.html">Color</a></li>
+            </ul>
+            <ul class="list drawer-list">
+              <div class="list-title text-bold">Components</div>
+              <li><a href="/components/Avatar/avatar.html">Avatar</a></li>
+              <li><a href="/components/Alert/alert.html">Alert</a></li>
+              <li><a href="/components/Badge/badge.html">Badge</a></li>
+              <li><a href="/components/Button/button.html">Button</a></li>
+              <li><a href="/components/Card/card.html">Card</a></li>
+              <li><a href="/components/Grid/grid.html">Grid</a></li>
+              <li><a href="/components/Image/image.html">Image</a></li>
+              <li><a href="/components/Input/input.html">Input</a></li>
+              <li><a href="/components/List/list.html">List</a></li>
+              <li class="text-primary text-bold"><a href="#">Modal</a></li>
+              <li><a href="/components/Navbar/navbar.html">Navbar</a></li>
+              <li><a href="/components/Rating/rating.html">Rating</a></li>
+              <li><a href="/components/Slider/slider.html">Slider</a></li>
+              <li>
+                <a href="/components/Typography/typography.html">Typography</a>
+              </li>
+              <li><a href="/components/Toast/toast.html">Toast</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav-links">
+          <i class="fas fa-moon theme-icon"></i>
+          <a
+            href="/components/Avatar/avatar.html"
+            class="text-primary text-bold"
+            ><i class="fas fa-file"></i><span>Docs</span></a
+          >
+          <a
+            href="https://github.com/GMuskan"
+            target="_blank"
+            class="text-primary text-bold"
+          >
+            <button class="btn outline-primary">
+              <i class="fab fa-github"></i> GitHub
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="doc-container">
+      <aside class="sidebar">
+        <div class="list">
+          <div class="list-title text-bold">Starting Guide</div>
+          <li><a href="/Color/color.html">Color</a></li>
+        </div>
+        <div class="list">
+          <div class="list-title text-bold">Components</div>
+          <li><a href="/components/Avatar/avatar.html">Avatar</a></li>
+          <li><a href="/components/Alert/alert.html">Alert</a></li>
+          <li><a href="/components/Badge/badge.html">Badge</a></li>
+          <li><a href="/components/Button/button.html">Button</a></li>
+          <li><a href="/components/Card/card.html">Card</a></li>
+          <li><a href="/components/Grid/grid.html">Grid</a></li>
+          <li><a href="/components/Image/image.html">Image</a></li>
+          <li><a href="/components/Input/input.html">Input</a></li>
+          <li><a href="/components/List/list.html">List</a></li>
+          <li class="text-primary text-bold"><a href="#">Modal</a></li>
+          <li><a href="/components/Navbar/navbar.html">Navbar</a></li>
+          <li><a href="/components/Rating/rating.html">Rating</a></li>
+          <li><a href="/components/Slider/slider.html">Slider</a></li>
+          <li>
+            <a href="/components/Typography/typography.html">Typography</a>
+          </li>
+          <li><a href="/components/Toast/toast.html">Toast</a></li>
+        </div>
+      </aside>
+      <main class="doc-content">
+        <header class="content-title">Modal</header>
+        <div class="content-subtitle">
+          Modals are the best way to convey some important update/message to the
+          users without taking space in the actual content.
+        </div>
+        <div class="divider"></div>
+
+        <!-- Normal Modal -->
+        <div class="content-head">Normal Modal</div>
+        <div class="content-subtitle">
+          These modals contains a <span class="note">content</span> section and
+          a <span class="note">close</span> button. Use
+          <code class="text-bold">&nbsp;modal-container&nbsp;</code> on the
+          container and
+          <code class="text-bold">&nbsp;modal-content&nbsp;</code> on the
+          content section.
+        </div>
+        <div class="output">
+          <button class="btn primary" data-modal>Modal</button>
+          <div class="modal-container">
+            <div class="modal-content">
+              <button class="modal-close"></button>
+              <div class="modal-text text-center">
+                <div class="h4 text-primary">Kakashi Hatake</div>
+                <div class="text-light">
+                  Kakashi Hatake is a fictional character in the Naruto manga
+                  and anime series created by Masashi Kishimoto. In the story,
+                  Kakashi is the teacher of Team 7, consisting of the series'
+                  primary characters, Naruto Uzumaki, Sasuke Uchiha, and Sakura
+                  Haruno
+                </div>
+              </div>
+              <div class="cta-container">
+                <div class="btn outline">Go back</div>
+                <div class="btn primary">Get now</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="code">
+          <pre>
+                    <code class="html">
+    /* Using the 'modal-container' class on container along with 'modal-content' on child */ 
+
+            &lt;div class="modal-container"&gt;
+                &lt;div class="modal-content"&gt;
+                    &lt;button class="modal-close"&gt;&lt;/button&gt;
+                    &lt;div class="modal-text text-center"&gt;
+                        &lt;div class="h4 text-primary"&gt;Kakashi Hatake&lt;/div&gt;
+                        &lt;div class="text-light"&gt;
+                            Kakashi Hatake is a fictional character in the Naruto manga and anime series created by
+                            Masashi
+                            Kishimoto. In the story, Kakashi is the teacher of Team 7, consisting of the series'
+                            primary
+                            characters, Naruto Uzumaki, Sasuke Uchiha, and Sakura Haruno
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="cta-container"&gt;
+                        &lt;div class="btn outline"&gt;Go back&lt;/div&gt;
+                        &lt;div class="btn primary"&gt;Get now&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+                    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Modal with header -->
+        <div class="content-head">Modal with Header</div>
+        <div class="content-subtitle">
+          These modals contains a <span class="note">header</span> section,
+          <span class="note">content</span> section and a
+          <span class="note">close</span> button. Use
+          <code class="text-bold">&nbsp;modal-container&nbsp;</code> on the
+          container and
+          <code class="text-bold">&nbsp;modal-content with-header&nbsp;</code>
+          on the content section.
+        </div>
+        <div class="output">
+          <button class="btn primary" data-modal-with-header>Modal</button>
+
+          <div class="modal-container" data-with-header>
+            <div class="modal-content with-header">
+              <div class="modal-header">
+                <div class="h4 text-primary">Kakashi Hatake</div>
+                <button class="modal-close" data-close></button>
+              </div>
+              <div class="modal-text text-justify">
+                <div class="text-light">
+                  Kakashi Hatake is a fictional character in the Naruto manga
+                  and anime series created by Masashi Kishimoto. In the story,
+                  Kakashi is the teacher of Team 7, consisting of the series'
+                  primary characters, Naruto Uzumaki, Sasuke Uchiha, and Sakura
+                  Haruno.
+                </div>
+              </div>
+              <div class="cta-container">
+                <div class="btn outline">Go back</div>
+                <div class="btn primary">Get now</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="code">
+          <pre>
+                    <code class="html">
+    /* Using the 'badge' class on container along with 'variant' on child */ 
+
+            &lt;div class="modal-container"&gt;
+                &lt;div class="modal-content with-header"&gt;
+                    &lt;div class="modal-header"&gt;
+                        &lt;div class="h4 text-primary"&gt;Kakashi Hatake&lt;/div&gt;
+                        &lt;button class="modal-close"&gt;&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class="modal-text text-justify"&gt;
+                        &lt;div class="h4 text-primary"&gt;Kakashi Hatake&lt;/div&gt;
+                        &lt;div class="text-light"&gt;
+                            Kakashi Hatake is a fictional character in the Naruto manga and anime series created by
+                            Masashi
+                            Kishimoto. In the story, Kakashi is the teacher of Team 7, consisting of the series'
+                            primary
+                            characters, Naruto Uzumaki, Sasuke Uchiha, and Sakura Haruno
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="cta-container"&gt;
+                        &lt;div class="btn outline"&gt;Go back&lt;/div&gt;
+                        &lt;div class="btn primary"&gt;Get now&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+                    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <footer class="doc-footer">
+          <div class="prev-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="iconify iconify--grommet-icons"
+              width="1em"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                d="M15 6l-6 6l6 6"
+              ></path>
+            </svg>
+            <a href="../List/list.html">List</a>
+          </div>
+          <div class="next-link">
+            <a href="../Navbar/navbar.html">Navbar</a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="iconify iconify--ic"
+              width="1em"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <section id="footer">
+      <header>
+        Made with <i class="fas fa-heart text-secondary"></i> by
+        <span class="text-secondary">Muskan Gupta</span>
+      </header>
+      <div class="social-links">
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-github"></i>
+      </div>
+      <span class="copyright text-light"
+        >&copy; 2023
+        <span class="text-primary text-bold">UI-Library</span></span
+      >
+    </section>
+    <button title="Top" class="btn floating-btn primary" data-top>
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"
+      integrity="sha512-IaaKO80nPNs5j+VLxd42eK/7sYuXQmr+fyywCNA0e+C6gtQnuCXNtORe9xR4LqGPz5U9VpH+ff41wKs/ZmC3iA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/a11y-light.min.css"
+        integrity="sha512-WDk6RzwygsN9KecRHAfm9HTN87LQjqdygDmkHSJxVkVI7ErCZ8ZWxP6T8RvBujY1n2/E4Ac+bn2ChXnp5rnnHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/component.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="/index.js" defer></script>
+    <title>Home</title>
+</head>
+<body>
+    <nav class="navbar nav-main">
+        <div class="nav-container">
+            <div class="home-logo">
+                <a href="/">
+                    <img class="img img-responsive" src="/assets//Ui-logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <i class="fas fa-moon theme-icon"></i>
+                <a href="/components/Avatar/avatar.html" class="text-primary text-bold">
+                    <i class="fas fa-tile"><span>Docs</span></i>
+                </a>
+                <a href="https://github.com/GMuskan" target="_blank" class="text-primary text-bold">
+                    <button class="btn outline-primary">
+                        <i class="fab fa-github"></i> GitHub
+                    </button>
+                </a>
+            </a>
+            </div>
+        </div>
+    </nav>
+    <section id="main">
+        <main>
+            <header class="heading">Build Fast, Ship Fast, Worry Less.</header>
+            <div class="subheading">
+                <span class="text-primary text-bold">UI</span> is a component library which is <span class="text-secondary"> light weight</span>, easy to use, out of the box <span class="text-secondary">modern styling</span>. Stop worrying and start applying!
+            </div>
+            <div class="btn-group">
+                <a href="#installation"><button class="btn tertiary">Installation</button></a>
+                <a href="/Color/color.html"><button class="btn primary">Get Started</button></a>
+            </div>
+        </main>
+    </section>
+    <section id="installation">
+        <h2>Installation Guide</h2>
+        <div class="installation-body">
+            <div class="installation-image">
+                <img class="img img-responsive" src="/assets//Ui-logo.png" alt="logo">
+            </div>
+            <div class="steps text-justify">
+                <div class="step_1">
+                    Include the <code>&lt;link/&gt;</code> tag given
+                    below in your <code>&lt;head/&gt;</code> tag above all the stylesheets.
+                    <div class="code-container">
+                        <pre>
+                            <code class="html">&lt;link rel="stylesheet" href=""/&gt;</code>
+                        </pre>
+                    </div>
+                </div>
+                <div class="step_2">
+                    Some components may require use of <code>JavaScript</code>, so include below code in
+                    <code>&lt;body/&gt;</code> tag at the very end.
+                    <div class="code-container">
+                        <pre>
+                            <code class="html">&lt;script src=""&gt;&lt;/script&gt;</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <header>Made with <i class="fa fa-heart text-secondary"></i> by <span class="text-secondary">Muskan Gupta</span>
+        </header>
+        <div class="social-links">
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-github"></i>
+        </div>
+        <span class="copyright text-light">&copy; 2023 <span class="text-primary text-bold">UI Library</span></span>
+    </section>
+    <button title="Top" class="btn floating-btn primary" data-top>
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"
+        integrity="sha512-IaaKO80nPNs5j+VLxd42eK/7sYuXQmr+fyywCNA0e+C6gtQnuCXNtORe9xR4LqGPz5U9VpH+ff41wKs/ZmC3iA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

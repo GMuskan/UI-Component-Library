@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+/*
+0 - 600px:        Phone
+600px - 900px:    Tablet Potrait
+900px - 1200px:   Tablet Landscape
+1200 - 1800 is where our normal styles would apply
+1800px + :        Big Desktop
+
+
+$breakpoint argument choices
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+
+ORDER: base + typography > general layout + grid > page layout > components
+
+*/
+/**************/
+/* Basic reset */
+/**************/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media only screen and (max-width: 56.25em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media only screen and (min-width: 112.5em) {
+    html {
+        font-size: 75%;
+    }
+}
+
+body {
+    overflow: overlay;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    background-color: var(--color-tertiary);
+    color: var(--color-background-accent);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

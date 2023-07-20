@@ -1,0 +1,149 @@
+.btn {
+  padding: 1rem 1.5rem;
+  border: none;
+  background-color: var(--color-default);
+  color: var(--color-grey-light-1);
+  font-size: 1.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  border-radius: var(--border-radius-3);
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn.primary {
+  background-color: var(--color-primary);
+}
+
+.btn.primary:hover,
+.btn.icon-btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.btn.secondary {
+  background-color: var(--color-secondary);
+}
+
+.btn.secondary:hover {
+  background-color: var(--color-secondary-dark);
+}
+.btn.tertiary {
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+}
+.btn.tertiary:hover {
+  background-color: var(--color-tertiary-dark);
+}
+
+.btn.error {
+  background-color: var(--color-error);
+}
+
+.btn.error:hover {
+  background-color: var(--color-error-dark);
+}
+
+.btn.success {
+  background-color: var(--color-success);
+}
+
+.btn.success:hover {
+  background-color: var(--color-success-dark);
+}
+
+/* Outline */
+.btn.outline {
+  background-color: var(--color-tertiary);
+  color: var(--color-default);
+  outline: var(--color-default) solid 1px;
+}
+
+.btn.outline:hover {
+  background-color: var(--color-default);
+  color: var(--color-tertiary);
+}
+
+.btn.outline-primary {
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+  outline: var(--color-primary) solid 1px;
+}
+
+.btn.outline-primary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-tertiary);
+}
+
+.btn.outline-secondary {
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+  outline: var(--color-secondary) solid 1px;
+}
+
+.btn.outline-secondary:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-tertiary);
+}
+
+.btn.outline-error {
+  background-color: var(--color-tertiary);
+  color: var(--color-error);
+  outline: var(--color-error) solid 1px;
+}
+
+.btn.outline-error:hover {
+  background-color: var(--color-error);
+  color: var(--color-tertiary);
+}
+
+.btn.outline-success {
+  background-color: var(--color-tertiary);
+  color: var(--color-success);
+  outline: var(--color-success) solid 1px;
+}
+
+.btn.outline-success:hover {
+  background-color: var(--color-success);
+  color: var(--color-tertiary);
+}
+
+/* Icon button and Link Button*/
+.btn.icon-btn,
+.btn .btn-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn.icon-btn {
+  background-color: var(--color-primary);
+}
+
+.btn.icon-btn > *:first-child,
+.btn .btn-link > *:first-child {
+  margin-right: 0.4rem;
+}
+
+/* Floating Action button */
+
+.btn.floating-btn {
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 5;
+  font-size: 2rem;
+  font-weight: 700;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-rounded);
+}

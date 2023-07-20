@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/assets/favicon/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/a11y-light.min.css"
+      integrity="sha512-WDk6RzwygsN9KecRHAfm9HTN87LQjqdygDmkHSJxVkVI7ErCZ8ZWxP6T8RvBujY1n2/E4Ac+bn2ChXnp5rnnHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/component.css" />
+    <script src="/index.js" defer></script>
+    <title>UI-Library | List</title>
+  </head>
+
+  <body>
+    <nav class="navbar nav-main">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="/">
+            <img
+              class="img img-responsive"
+              src="/assets/ui-logo.png"
+              alt="logo"
+            />
+          </a>
+        </div>
+        <div class="drawer-container">
+          <button class="btn outline-primary" data-drawer>
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="backdrop"></div>
+          <div class="drawer">
+            <header>
+              <img
+                class="img img-responsive"
+                src="/assets/ui-logo.png"
+                alt="logo"
+              />
+            </header>
+            <ul class="list drawer-list">
+              <div class="list-title text-bold">Starting Guide</div>
+              <li><a href="/Color/color.html">Color</a></li>
+            </ul>
+            <ul class="list drawer-list">
+              <div class="list-title text-bold">Components</div>
+              <li><a href="/components/Avatar/avatar.html">Avatar</a></li>
+              <li><a href="/components/Alert/alert.html">Alert</a></li>
+              <li><a href="/components/Badge/badge.html">Badge</a></li>
+              <li><a href="/components/Button/button.html">Button</a></li>
+              <li><a href="/components/Card/card.html">Card</a></li>
+              <li><a href="/components/Grid/grid.html">Grid</a></li>
+              <li><a href="/components/Image/image.html">Image</a></li>
+              <li><a href="/components/Input/input.html">Input</a></li>
+              <li class="text-primary text-bold"><a href="#">List</a></li>
+              <li><a href="/components/Modal/modal.html">Modal</a></li>
+              <li><a href="/components/Navbar/navbar.html">Navbar</a></li>
+              <li><a href="/components/Rating/rating.html">Rating</a></li>
+              <li><a href="/components/Slider/slider.html">Slider</a></li>
+              <li>
+                <a href="/components/Typography/typography.html">Typography</a>
+              </li>
+              <li><a href="/components/Toast/toast.html">Toast</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav-links">
+          <i class="fas fa-moon theme-icon"></i>
+          <a
+            href="/components/Avatar/avatar.html"
+            class="text-primary text-bold"
+            ><i class="fas fa-file"></i><span>Docs</span></a
+          >
+          <a
+            href="https://github.com/GMuskan"
+            target="_blank"
+            class="text-primary text-bold"
+          >
+            <button class="btn outline-primary">
+              <i class="fab fa-github"></i> GitHub
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="doc-container">
+      <aside class="sidebar">
+        <div class="list">
+          <div class="list-title text-bold">Starting Guide</div>
+          <li><a href="/Color/color.html">Color</a></li>
+        </div>
+        <div class="list">
+          <div class="list-title text-bold">Components</div>
+          <li><a href="/components/Avatar/avatar.html">Avatar</a></li>
+          <li><a href="/components/Alert/alert.html">Alert</a></li>
+          <li><a href="/components/Badge/badge.html">Badge</a></li>
+          <li><a href="/components/Button/button.html">Button</a></li>
+          <li><a href="/components/Card/card.html">Card</a></li>
+          <li><a href="/components/Grid/grid.html">Grid</a></li>
+          <li><a href="/components/Image/image.html">Image</a></li>
+          <li><a href="/components/Input/input.html">Input</a></li>
+          <li class="text-primary text-bold"><a href="#">List</a></li>
+          <li><a href="/components/Modal/modal.html">Modal</a></li>
+          <li><a href="/components/Navbar/navbar.html">Navbar</a></li>
+          <li><a href="/components/Rating/rating.html">Rating</a></li>
+          <li><a href="/components/Slider/slider.html">Slider</a></li>
+          <li>
+            <a href="/components/Typography/typography.html">Typography</a>
+          </li>
+          <li><a href="/components/Toast/toast.html">Toast</a></li>
+        </div>
+      </aside>
+      <main class="doc-content">
+        <header class="content-title">List</header>
+        <div class="content-subtitle">
+          List are the best way to show items specific to a certain category,
+          eg: Gender, list of filters , etc.
+        </div>
+        <div class="divider"></div>
+
+        <!-- Normal List -->
+        <div class="content-head">Normal List</div>
+        <div class="content-subtitle">
+          These are normal list where all the items are arranged one below
+          another. Use class <code class="text-bold">&nbsp;list&nbsp;</code> on
+          the container and
+          <code class="text-bold">&nbsp;list-title&nbsp;</code> class on the
+          title of the list.
+        </div>
+        <div class="output">
+          <div class="list">
+            <div class="list-title text-bold">Company</div>
+            <li>Products</li>
+            <li>About</li>
+            <li>Testimonials</li>
+            <li>Contact</li>
+          </div>
+        </div>
+
+        <div class="code">
+          <pre>
+                    <code class="html">
+        /* Using class 'list' on container and 'list-title' on heading. */
+
+            &lt;div class="list"&gt;
+                &lt;div class="list-title text-bold"&gt;Company&lt;/div&gt;
+                &lt;li&gt;Products&lt;/li&gt;
+                &lt;li&gt;About&lt;/li&gt;
+                &lt;li&gt;Testimonials&lt;/li&gt;
+                &lt;li&gt;Contact&lt;/li&gt;
+            &lt;/div&gt;
+                    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Nested List -->
+        <div class="content-head">Nested List</div>
+        <div class="content-subtitle">
+          Nested lists are very handy to show nested data i.e. list of list. Use
+          class <code class="text-bold">&nbsp;list&nbsp;</code> on the container
+          and <code class="text-bold">&nbsp;nested-list&nbsp;</code> on the
+          nested list container.
+        </div>
+        <div class="output">
+          <div class="list">
+            <div class="list-title text-bold">Company</div>
+            <li>Products</li>
+            <li class="nested-list">
+              <div>About</div>
+              <ul>
+                <li>News</li>
+                <li>Social Media</li>
+              </ul>
+            </li>
+            <li>Testimonials</li>
+            <li>Contact</li>
+          </div>
+        </div>
+
+        <div class="code">
+          <pre>
+                    <code class="html">
+        /* Using class 'list' on container and 'list-title' on heading. */
+
+            &lt;div class="list"&gt;
+                &lt;div class="list-title text-bold"&gt;Company&lt;/div&gt;
+                &lt;li&gt;Products&lt;/li&gt;
+                &lt;li class="nested-list"&gt;
+                    &lt;div&gt; About &lt;/div&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;News&lt;/li&gt;
+                        &lt;li&gt;Social Media&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;Testimonials&lt;/li&gt;
+                &lt;li&gt;Contact&lt;/li&gt;
+            &lt;/div&gt;
+                    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Stacked List -->
+        <div class="content-head">Stacked List</div>
+        <div class="content-subtitle">
+          These are lists where number of items can be stacked one above
+          another. Use class <code class="text-bold">&nbsp;list&nbsp;</code> on
+          the container along with
+          <code class="text-bold">&nbsp;stacked-list&nbsp;</code> class on the
+          elements of list.
+        </div>
+        <div class="output">
+          <div class="list stacked">
+            <li class="stacked-item">
+              <img
+                class="img img-round"
+                src="https://source.unsplash.com/3uuLWb6aQXc/"
+                alt="simple image"
+              />
+              <span class="text-bold">Kakshi Hatake, Copy Ninja</span>
+            </li>
+            <li class="stacked-item">
+              <img
+                class="img img-round"
+                src="https://source.unsplash.com/3uuLWb6aQXc/"
+                alt="simple image"
+              />
+              <span class="text-bold">Kakshi Hatake, Copy Ninja</span>
+            </li>
+            <li class="stacked-item">
+              <img
+                class="img img-round"
+                src="https://source.unsplash.com/3uuLWb6aQXc/"
+                alt="simple image"
+              />
+              <span class="text-bold">Kakshi Hatake, Copy Ninja</span>
+            </li>
+            <li class="stacked-item">
+              <img
+                class="img img-round"
+                src="https://source.unsplash.com/3uuLWb6aQXc/"
+                alt="simple image"
+              />
+              <span class="text-bold">Kakshi Hatake, Copy Ninja</span>
+            </li>
+          </div>
+        </div>
+
+        <div class="code">
+          <pre>
+                    <code class="html">
+        /* Using class 'list' on container along with 'stacked' */
+
+            &lt;div class="list stacked"&gt;
+                &lt;li class="stacked-item"&gt;
+                    &lt;img class="img img-round" src="your image" alt="simple image"&gt;
+                    &lt;span class="text-bold">some text&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li class="stacked-item"&gt;
+                    &lt;img class="img img-round" src="your image" alt="simple image"&gt;
+                    &lt;span class="text-bold">some text&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li class="stacked-item"&gt;
+                    &lt;img class="img img-round" src="your image" alt="simple image"&gt;
+                    &lt;span class="text-bold">some text&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li class="stacked-item"&gt;
+                    &lt;img class="img img-round" src="your image" alt="simple image"&gt;
+                    &lt;span class="text-bold">some text&lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/div&gt;
+                    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Custom List -->
+        <div class="content-head">Custom List</div>
+        <div class="content-subtitle">
+          List can be customized to display options in desired manner.
+        </div>
+        <div class="output">
+          <div class="list">
+            <div class="list-title text-bold">CheckList</div>
+            <li>
+              <div class="checkbox-grp">
+                <input type="checkbox" checked id="checked" />
+                <label for="checked">Checked</label>
+              </div>
+            </li>
+            <li>
+              <div class="checkbox-grp">
+                <input type="checkbox" id="checked_1" />
+                <label for="checked_1">Checked</label>
+              </div>
+            </li>
+            <li>
+              <div class="checkbox-grp">
+                <input type="checkbox" id="checked_2" />
+                <label for="checked_2">Checked</label>
+              </div>
+            </li>
+            <li>
+              <div class="checkbox-grp">
+                <input type="checkbox" id="checked_3" />
+                <label for="checked_3">Checked</label>
+              </div>
+            </li>
+          </div>
+        </div>
+
+        <div class="code">
+          <pre>
+                    <code class="html">
+             /* Using class 'list' on container */
+
+            &lt;div class="list"&gt;
+                &lt;div class="list-title text-bold"&gt;Company&lt;/div&gt;
+                &lt;li&gt;
+                    &lt;div class="checkbox-grp"&gt;
+                        &lt;input type="checkbox" checked id="checked"&gt;
+                        &lt;label for="checked"&gt;Checked&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class="checkbox-grp"&gt;
+                        &lt;input type="checkbox" checked id="checked"&gt;
+                        &lt;label for="checked"&gt;Checked&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                &lt;div class="checkbox-grp"&gt;
+                    &lt;input type="checkbox" checked id="checked"&gt;
+                    &lt;label for="checked"&gt;Checked&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class="checkbox-grp"&gt;
+                        &lt;input type="checkbox" checked id="checked"&gt;
+                        &lt;label for="checked"&gt;Checked&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/div&gt;
+                    </code></pre>
+        </div>
+        <div class="divider"></div>
+
+        <footer class="doc-footer">
+          <div class="prev-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="iconify iconify--grommet-icons"
+              width="1em"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                d="M15 6l-6 6l6 6"
+              ></path>
+            </svg>
+            <a href="../Input/input.html">Input</a>
+          </div>
+          <div class="next-link">
+            <a href="../Modal/modal.html">Modal</a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="iconify iconify--ic"
+              width="1em"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <section id="footer">
+      <header>
+        Made with <i class="fas fa-heart text-secondary"></i> by
+        <span class="text-secondary">Muskan Gupta</span>
+      </header>
+      <div class="social-links">
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-github"></i>
+      </div>
+      <span class="copyright text-light"
+        >&copy; 2023
+        <span class="text-primary text-bold">UI-Library</span></span
+      >
+    </section>
+    <button title="Top" class="btn floating-btn primary" data-top>
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"
+      integrity="sha512-IaaKO80nPNs5j+VLxd42eK/7sYuXQmr+fyywCNA0e+C6gtQnuCXNtORe9xR4LqGPz5U9VpH+ff41wKs/ZmC3iA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+.center-text {
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    display: block;
+    margin: 1rem 0;
+    line-height: 1.15;
+    font-weight: 400;
+}
+
+.h1,
+h1 {
+    font-size: 4.8rem;
+}
+
+.h2,
+h2 {
+    font-size: 4rem;
+}
+
+.h3,
+h3 {
+    font-size: 3.2rem;
+}
+
+.h4,
+h4 {
+    font-size: 2.8rem;
+}
+
+.h5,
+h5 {
+    font-size: 2.4rem;
+}
+
+.h6,
+h6 {
+    font-size: 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.text-strike {
+    text-decoration: line-through;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.text-regular {
+    font-weight: 400;
+}
+
+.text-light {
+    font-weight: 300;
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+.text-tertiary {
+    color: var(--color-tertiary);
+}
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
