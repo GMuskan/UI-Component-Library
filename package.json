@@ -1,0 +1,24 @@
+{
+  "name": "UILibrary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GMuskan/UI-Component-Library.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GMuskan/UI-Component-Library/issues"
+  },
+  "homepage": "https://github.com/GMuskan/UI-Component-Library#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
