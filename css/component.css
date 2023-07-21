@@ -14,7 +14,7 @@
 @import url("../components/Grid/grid.css");
 @import url("../components/Slider/slider.css");
 @import url("./utilities.css");
-@import url("./main.css");
+/* @import url("./main.css"); */
 
 :root {
     --color-primary: #4361ee;
