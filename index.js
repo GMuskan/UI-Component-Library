@@ -78,3 +78,103 @@ themeToggle.addEventListener("click", () => {
         disableDarkMode();
     }
 });
+
+const btn = document.querySelector("[data-modal]");
+const btnHeader = document.querySelector("[data-modal-with-header]");
+const modalClose = document.querySelector(".modal-close");
+const modalCloseHeader = document.querySelector("[data-close]");
+const modalContainer = document.querySelector(".modal-container");
+const modalWithHeader = document.querySelector("[data-with-header]");
+const modalContent = document.querySelector(".modal-content");
+
+function modal() {
+    if (btn) {
+        btn.addEventListener("click", () => {
+            if (modalContent.classList.contains("with-header"))
+                modalWithHeader.classList.add("active");
+            else modalContainer.classList.add("active");
+        });
+    }
+    if (btnHeader) {
+        btnHeader.addEventListener("click", () => {
+            modalWithHeader.classList.add("active");
+        });
+    }
+    if (modalClose) {
+        modalClose.addEventListener("click", () => {
+            modalContainer.classList.remove("active");
+        });
+    }
+    if (modalCloseHeader) {
+        modalCloseHeader.addEventListener("click", () => {
+            modalWithHeader.classList.remove("active");
+        });
+    }
+}
+
+modal();
+
+const ratingStars = document.querySelectorAll(".rating-input");
+const form = document.querySelector(".submit-review");
+const showReview = document.querySelector(".show-review");
+
+function checkStars(idx) {
+    if (ratingStars[idx].checked) {
+        for (let j = idx - 1; j >= 0; j--) {
+            ratingStars[j].checked = true;
+        }
+    } else {
+        for (let j = idx + 1; j < ratingStars.length; j++) {
+            ratingStars[j].checked = false;
+        }
+    }
+}
+
+function rating() {
+    ratingStars.forEach((star, id) => {
+        star.addEventListener("change", () => checkStars(id));
+    });
+
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            let sum = 0;
+            ratingStars.forEach((star) => {
+                if (star.checked) sum += 1;
+            });
+
+            if (sum != 0) showReview.innerText = `Thank you for ${sum} stars!`;
+        });
+    }
+}
+
+rating();
+
+const toastContainer = document.querySelector(".toast");
+const openToast = document.querySelector("[data-toast]");
+const openToast2 = document.querySelector("[data-toast-2]");
+const btnClose = document.querySelector(".btn-close");
+
+let timerID, timerID2;
+
+function toast() {
+    if (openToast) {
+        openToast.addEventListener("click", () => {
+            toastContainer.style.display = "block";
+            timerID = setTimeout(() => {
+                toastContainer.style.display = "none";
+            }, 3000);
+        });
+    }
+
+    if (btnClose) {
+        btnClose.addEventListener("click", () => {
+            clearTimeout(timerID);
+            toastContainer.style.display = "none";
+        });
+    }
+}
+
+toast();
+
+
