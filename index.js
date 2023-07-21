@@ -79,12 +79,12 @@ themeToggle.addEventListener("click", () => {
     }
 });
 
-const btn = document.querySelector("[data-modal]");
-const btnHeader = document.querySelector("[data-modal-with-header]");
+const btn = document.querySelector(".data-modal");
+const btnHeader = document.querySelector(".data-modal-with-header");
 const modalClose = document.querySelector(".modal-close");
-const modalCloseHeader = document.querySelector("[data-close]");
+const modalCloseHeader = document.querySelector(".data-close");
 const modalContainer = document.querySelector(".modal-container");
-const modalWithHeader = document.querySelector("[data-with-header]");
+const modalWithHeader = document.querySelector(".data-with-header");
 const modalContent = document.querySelector(".modal-content");
 
 function modal() {
@@ -151,8 +151,8 @@ function rating() {
 rating();
 
 const toastContainer = document.querySelector(".toast");
-const openToast = document.querySelector("[data-toast]");
-const openToast2 = document.querySelector("[data-toast-2]");
+const openToast = document.querySelector(".data-toast");
+const openToast2 = document.querySelector(".data-toast-2");
 const btnClose = document.querySelector(".btn-close");
 
 let timerID, timerID2;
